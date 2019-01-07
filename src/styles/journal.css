@@ -2,7 +2,19 @@
     display: flex-inline;
     flex-direction: row;
 } */
-fieldset {
+body {
+    background-color: maroon;
+    color: gold;
+    max-width: 800px;
+    margin: auto;
+}fieldset {
     display: flex;
     flex-direction: column;
+    border: 0;
+}
+label {
+    font-weight: bold;
+}
+h1 {
+    text-decoration: underline;
 }
