@@ -20,11 +20,15 @@
         </fieldset>
         <fieldset>
             <label for="journalEntry">Journal Entry</label>
-            <input type="text" name="journalEntry" id="journalEntry" />
+            <textarea name="journalEntry" id="journalEntry" rows="30" cols="5">
         </fieldset>
         <fieldset>
             <label for="journalMood">Mood for the day</label>
-            <input type="list" name="journalMood" id="journalMood" />
+            <select name="journalMood" id="journalMood">
+                <option value="frustrated">frustrated</option>
+                <option value="sad">sad</option>
+                <option value="happy">happy</option>
+            </select>
         </fieldset>
         <button>Record Journal Entry</button>
     </form>
