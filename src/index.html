@@ -12,8 +12,25 @@
   <form action="">
         <fieldset>
             <label for="journalDate">Date of Entry</label>
-            <input type="date" name="journalDate" id="journalDate">
+            <input type="date" name="journalDate" id="journalDate" />
         </fieldset>
+        <fieldset>
+            <label for="journalLearn">Concepts covered</label>
+            <input type="text" name="journalLearn" id="journalLearn" />
+        </fieldset>
+        <fieldset>
+            <label for="journalEntry">Journal Entry</label>
+            <textarea name="journalEntry" id="journalEntry" cols="30" rows="5"></textarea>
+        </fieldset>
+        <fieldset>
+            <label for="journalMood">Mood for the day</label>
+            <select name="journalMood" id="journalMood">
+                <option value="frustrated">frustrated</option>
+                <option value="sad">sad</option>
+                <option value="happy">happy</option>
+            </select>
+        </fieldset>
+        <button>Record Journal Entry</button>
     </form>
 </body>
 </html>
