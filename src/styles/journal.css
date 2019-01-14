@@ -2,7 +2,7 @@
     display: flex-inline;
     flex-direction: row;
 } */
-body {;
+body {
     max-width: 800px;
     margin: auto;
     background-color: #00ffaa;
@@ -20,4 +20,17 @@ label {
 }
 h1 {
     text-decoration: underline;
+}
+header, .entry {
+    border: 0;
+    border-top: black solid 5px;
+    background-color: white;
+    margin-top: 10px;
+}
+.date {
+    float: right;
+    margin-top: -10px;
+}
+header {
+    font-weight: bold;
 }
