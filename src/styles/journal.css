@@ -1,0 +1,23 @@
+/* fieldset {
+    display: flex-inline;
+    flex-direction: row;
+} */
+body {;
+    max-width: 800px;
+    margin: auto;
+    background-color: #00ffaa;
+}
+fieldset {
+    display: flex;
+    flex-direction: column;
+    border: 0;
+    border-top: black solid 5px;
+    background-color: white;
+    margin-top: 10px;
+}
+label {
+    font-weight: bold;
+}
+h1 {
+    text-decoration: underline;
+}
