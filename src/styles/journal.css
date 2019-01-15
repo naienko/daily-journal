@@ -1,11 +1,10 @@
-/* fieldset {
-    display: flex-inline;
-    flex-direction: row;
-} */
 body {
-    max-width: 800px;
-    margin: auto;
-    background-color: #00ffaa;
+    background-color: #00eeff;
+    display: flex;
+    flex-direction: row;
+}
+article {
+    margin: 5px;
 }
 fieldset {
     display: flex;
@@ -21,15 +20,20 @@ label {
 h1 {
     text-decoration: underline;
 }
+.entryLog {
+    flex-grow: 1;
+}
 header, .entry {
     border: 0;
     border-top: black solid 5px;
     background-color: white;
     margin-top: 10px;
+    padding: 0px 5px 5px 5px;
 }
 .date {
     float: right;
-    margin-top: -10px;
+    margin-top: -15px;
+    padding: 5px;
 }
 header {
     font-weight: bold;
