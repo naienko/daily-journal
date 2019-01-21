@@ -1,17 +1,9 @@
-const journalEntries = [
-    {
-        date: "01/10/2019",
-        concepts: "Objects and notations",
-        entry: "today we learned about objects, dot notation, and bracket notation",
-        mood: "happy"
-    },
-    {
-        date: "01/08/2019",
-        concepts: "group project",
-        entry: "I should not have lied about how the group project made me feel",
-        mood: "frustrated"
-    }
-];
+fetch("http://localhost:8088/entries") // Fetch from the API
+    .then(entries as entries.json)  // Parse as JSON
+    .then(entries => {
+        // What should happen when we finally have the array?
+        renderJournalEntries(journalEntries);
+    })
 
 const makeJournalEntryComponent = (journalEntry) => {
     // Create your own HTML structure for a journal entry
@@ -35,4 +27,4 @@ const renderJournalEntries = (entries) => {
 }
 
 // Invoke the render function
-renderJournalEntries(journalEntries);
+// renderJournalEntries(journalEntries);
