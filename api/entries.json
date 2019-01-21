@@ -41,6 +41,13 @@
             "concepts": "Objects and notations",
             "entry": "today we learned about objects, dot notation, and bracket notation; practise writing and reading arrow functions; Arrays are for collections of things; objects describe single things; Define a thing in an object, then group object in arrays",
             "mood": "happy"
+        },
+        {
+            "id": 7,
+            "date": "01/21/2019",
+            "concepts": "apis get, fetch",
+            "entry": "fetch is a kind of Promise. Promise in JS means exactly what it sounds like: 'I promise I'll get you this data'. Seems to work in an if...when kind of way. It's possible to nest these, probably many layers deep, but scope is an issue. use the data from the fetch as near to the fetch as possible. public apis are thoroughly complicated",
+            "mood": "happy"
         }
     ]
 }
