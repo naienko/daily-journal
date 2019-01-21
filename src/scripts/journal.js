@@ -1,6 +1,6 @@
 fetch("http://localhost:8088/entries") // Fetch from the API
-    .then(entries as entries.json)  // Parse as JSON
-    .then(entries => {
+    .then(entries => entries.json())  // Parse as JSON
+    .then(journalEntries => {
         // What should happen when we finally have the array?
         renderJournalEntries(journalEntries);
     })
