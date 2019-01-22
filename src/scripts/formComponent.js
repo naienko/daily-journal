@@ -1,20 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Panya's NSS Journal</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="styles/journal.css" />
-</head>
-<body>
-    <nav>
-        <a href="#" id="getform">form</a><br />
-        <a href="#" id="getentries">entries</a>
-    </nav>
-    <article id="display">
-<!--        
-        <h1>Daily Journal</h1>
+// responsible for creating the entry form HTML component 
+const makeJournalFormComponent = () => {
+    // Create HTML structure for the entry form
+    return `<h1>Daily Journal</h1>
         <form action="" id="journalForm">
         <fieldset>
             <label for="journalDate">Date of Entry</label>
@@ -39,16 +26,5 @@
             </select>
         </fieldset>
         <button>Record Journal Entry</button>
-    </form>
--->
-    </article>
-    <article class="entryLog">
-
-    </article>
-    <script src="scripts/journal.js"></script>
-    <script src="scripts/data.js"></script>
-    <script src="scripts/formComponent.js"></script>
-    <script src="scripts/entryComponent.js"></script>
-    <script src="scripts/entriesDOM.js"></script>
-</body>
-</html>
+    </form>`;
+}
