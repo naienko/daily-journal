@@ -1,7 +1,12 @@
 body {
-    background-color: #00eeff;
     display: flex;
     flex-direction: row;
+    background: url('../images/v4fcnet_01.png') no-repeat scroll top left, black url('../images/v4fcnet_02.png') repeat-y scroll top left;
+    color : #FAD489;
+	font-family : Verdana, san-serif;
+	font-size : 14px;
+	text-align : justify;
+	letter-spacing : .1em;
 }
 article {
     margin: 5px;
@@ -10,9 +15,6 @@ fieldset {
     display: flex;
     flex-direction: column;
     border: 0;
-    border-top: black solid 5px;
-    background-color: white;
-    margin-top: 10px;
 }
 label {
     font-weight: bold;
@@ -20,25 +22,50 @@ label {
 h1 {
     text-decoration: underline;
 }
+nav {
+    min-width: 200px;
+    margin-top: 300px;
+    margin-left: 55px;
+    margin-right: 55px;
+}
 #display {
     flex-grow: 1;
-    border: 2px solid black;
+    margin-top: 85px;
+    margin-right: 15px;
 }
-/* .entryLog {
-    flex-grow: 1;
-} */
 header, .entry {
-    border: 0;
-    border-top: black solid 5px;
-    background-color: white;
     margin-top: 10px;
     padding: 0px 5px 5px 5px;
 }
+.entry {
+    border: 1px solid #A63700;
+    border-top: 10px solid #A63700;
+}
 .date {
     float: right;
-    margin-top: -15px;
     padding: 5px;
+    font-weight: bold;
+    margin-top: -3px;
 }
 header {
     font-weight: bold;
+}
+
+a:link {
+	color : #A63700;
+	text-decoration : underline;
+}
+a:visited {
+	color : #D95D04;
+	text-decoration : line-through;
+}
+a:hover, a:focus, a:active {
+	color : #FFFCD9;
+	text-decoration : none;
+}
+hr {
+	color : #FAD489;
+	height : 1px;
+	width : 90%;
+	text-align : center;
 }
