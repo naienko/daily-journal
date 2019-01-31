@@ -8,14 +8,18 @@ const createJournalEntry = (entryDate, entryHeader, entryFull, entryMood) => {
     };
 };
 
+// function to add the event listener
 const entryListener = () => {
     const journalForm = document.querySelector("#postEntry");
+    // what happens when we click the 'post' button?
     journalForm.addEventListener("click", () => {
         const entryDate = document.querySelector("#journalDate").value;
         const entryHeader = document.querySelector("#journalLearn").value;
         const entryFull = document.querySelector("#journalEntry").value;
         const entryMood = document.querySelector("#journalMood").value;
+        // construct entry object with factory function
         const newJournalEntry = createJournalEntry(entryDate, entryHeader, entryFull, entryMood);
+        // add it to JSON
         fetch("http://localhost:8088/entries",{
             method: "POST",
             headers: {
