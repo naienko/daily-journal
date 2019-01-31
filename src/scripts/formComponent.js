@@ -1,8 +1,7 @@
 // responsible for creating the entry form HTML component 
 const makeJournalFormComponent = () => {
     // Create HTML structure for the entry form
-    return `<h1>Daily Journal</h1>
-        <form action="" id="journalForm">
+    return `<form action="" id="journalForm">
         <fieldset>
             <label for="journalDate">Date of Entry</label>
             <input type="date" name="journalDate" id="journalDate" />
