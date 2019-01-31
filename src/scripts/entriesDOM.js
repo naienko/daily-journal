@@ -4,11 +4,9 @@ let insertHere = document.querySelector("#display");
 
 const renderJournalEntries = (entries) => {
     let HTMLsquirt = "";
-    for (let i = 0; i < entries.length; i++) {
-        const element = entries[i];
-        HTMLsquirt += makeJournalEntryComponent(element);
-    }
-    // let insertHere = document.querySelector(".entryLog");
+    entries.reverse().forEach(entry => {
+        HTMLsquirt += makeJournalEntryComponent(entry);
+    });
     insertHere.innerHTML = HTMLsquirt;
 };
 
