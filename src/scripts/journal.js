@@ -1,3 +1,13 @@
+//  Main application logic that uses the functions and objects
+//  defined in the other JavaScript files.
+
+const entryClick = document.querySelector("#getentries");
+// when we click the entries button, create the entries
+entryClick.addEventListener("click", () => {
+    API.getJournalEntries()
+        .then(journalEntries => renderDOM.createEntries(journalEntries));
+});
+
 // get the data from the form
 const createJournalEntry = (entryDate, entryHeader, entryFull, entryMood) => {
     return {
