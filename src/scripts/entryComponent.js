@@ -9,4 +9,4 @@ const makeJournalEntryComponent = (journalEntry) => {
         <p>Mood: ${journalEntry.mood}</p>
     </section>
     `;
-}
+};

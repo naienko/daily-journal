@@ -10,17 +10,20 @@ const renderJournalEntries = (entries) => {
     }
     // let insertHere = document.querySelector(".entryLog");
     insertHere.innerHTML = HTMLsquirt;
-}
+};
 
 const renderFormElement = () => {
     let HTMLsquirt = "";
     HTMLsquirt += makeJournalFormComponent();
     // let insertHere = document.querySelector("#formset");
     insertHere.innerHTML = HTMLsquirt;
-}
+};
 
 const formClick = document.querySelector("#getform");
-formClick.addEventListener("click", renderFormElement);
+formClick.addEventListener("click", () => {
+    renderFormElement();
+    entryListener();
+});
 
 const entryClick = document.querySelector("#getentries");
 entryClick.addEventListener("click", showAllEntries);

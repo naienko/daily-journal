@@ -1,4 +1,4 @@
-// responsible for creating the entry form HTML component 
+// responsible for creating the entry form HTML component
 const makeJournalFormComponent = () => {
     // Create HTML structure for the entry form
     return `<form action="" id="journalForm">
@@ -24,6 +24,6 @@ const makeJournalFormComponent = () => {
                 <option value="furious">furious</option>
             </select>
         </fieldset>
-        <button>Record Journal Entry</button>
+        <button id="postEntry">Record Journal Entry</button>
     </form>`;
-}
+};

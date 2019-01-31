@@ -6,5 +6,5 @@ const showAllEntries = () => {
         .then(journalEntries => {
             // What should happen when we finally have the array?
             renderJournalEntries(journalEntries);
-        })
-}
+        });
+};
