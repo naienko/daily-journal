@@ -50,11 +50,18 @@
       "mood": "happy"
     },
     {
-      "date": "2019-01-31",
+      "date": "01/31/2019",
       "concepts": "JSON POST method",
       "entry": "trying to add the POST method to my journal. practising factory functions, had check-in meeting.",
       "mood": "happy",
       "id": 8
+    },
+    {
+      "date": "2019-02-01",
+      "concepts": "array methods and chaining",
+      "entry": "practised array methods find, reverse, map, filter, reduce. converted various functions in journal code to methods",
+      "mood": "anxious",
+      "id": 9
     }
   ],
   "extras": [

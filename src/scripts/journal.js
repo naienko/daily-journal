@@ -29,13 +29,6 @@ const entryListener = () => {
         const entryMood = document.querySelector("#journalMood").value;
         // construct entry object with factory function
         const newJournalEntry = createJournalEntry(entryDate, entryHeader, entryFull, entryMood);
-        // add it to JSON
-        fetch("http://localhost:8088/entries",{
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(newJournalEntry)
-        });
+        API.saveJournalEntry(newJournalEntry);
     });
 };
