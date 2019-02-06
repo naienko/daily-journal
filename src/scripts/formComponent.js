@@ -27,5 +27,22 @@ const makeJournalFormComponent = () => {
             </select>
         </fieldset>
         <button id="postEntry">Record Journal Entry</button>
+        <div id="extras">
+            <fieldset>
+                <legend>Filter journal entries by mood</legend>
+            <div id="radioButtons">
+                <label for="happy">happy<input type="radio" name="moodSwitch" value="happy" /></label>
+                <label for="not yet">not yet<input type="radio" name="moodSwitch" value="not yet" /></label>
+                <label for="frustrated">frustrated<input type="radio" name="moodSwitch" value="frustrated" /></label>
+                <label for="sad">sad<input type="radio" name="moodSwitch" value="sad" /></label>
+                <label for="anxious">anxious<input type="radio" name="moodSwitch" value="anxious" /></label>
+                <label for="furious">furious<input type="radio" name="moodSwitch" value="furious" /></label>
+            </div>
+            </fieldset>
+            <fieldset>
+                <label for"searchjournal">search:</label>
+                <input type="text" name="searchjournal" id="searchjournal" />
+            </fieldset>
+        <div>
     </form>`;
 };
