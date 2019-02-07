@@ -18,3 +18,4 @@ const createJournalEntry = (entryDate, entryHeader, entryFull, entryMood) => {
 renderFormElement();
 entryListener();
 moodListener();
+searchListener();

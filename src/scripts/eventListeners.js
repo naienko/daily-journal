@@ -23,12 +23,29 @@ const moodListener = () => {
                 journalEntries => {
                     const moodEntries = journalEntries.filter(entries => entries.mood === mood);
                     if (moodEntries.length === 0) {
-                        document.querySelector("#displayEntries").innerHTML = `no entries found with that mood`;
+                        document.querySelector("#displayEntries").innerHTML = "no entries found with that mood";
                     } else {
                         renderDOM.createEntries(moodEntries);
                     }
                 }
-            )
-        })
+            );
+        });
+    });
+};
+
+const searchListener = () => {
+    document.querySelector("#searchjournal").addEventListener("keypress", event => {
+        const searchTerm = event.target.value;
+        returnedEntries = [];
+        API.getJournalEntries().then(
+            journalEntries => {
+                for (const value of Object.values(journalEntries)) {
+                    if(value.entry.includes(searchTerm)) {
+                        returnedEntries.push(value);
+                    }
+                }
+            renderDOM.createEntries(returnedEntries);
+        });
+            
     });
 }
