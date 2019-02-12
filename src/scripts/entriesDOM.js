@@ -1,20 +1,26 @@
-// responsible for modifying the DOM
+/*
+Author: Panya
+Intent: responsible for modifying the DOM
+*/
 
-// function for form display
-const renderFormElement = () => {
-    // let HTMLsquirt = "";
-    // HTMLsquirt += makeJournalFormComponent();
-    document.querySelector("#displayForm").innerHTML = makeJournalFormComponent();
+import makeJournalFormComponent from "./formComponent";
+import makeEntries from "./entryComponent";
+
+const renderDOM = {
+    createEntries: entries => {
+        let HTMLsquirt = "";
+        // reverse the array so most recent is at top
+        // add a sorting function in case the entries aren't in data order in database?
+        entries.reverse().forEach(entry => {
+            // run each entry through factory method
+            HTMLsquirt += makeEntries.createSingleEntry(entry);
+        });
+        // add it to DOM
+        document.querySelector("#displayEntries").innerHTML = HTMLsquirt;
+    },
+    renderFormElement: () => {
+        document.querySelector("#displayForm").innerHTML = makeJournalFormComponent();
+    }
 };
 
-const renderDOM = Object.create(null);
-renderDOM.createEntries = createEntries = entries => {
-    let HTMLsquirt = "";
-    // reverse the array so most recent is at top
-    entries.reverse().forEach(entry => {
-        // run each entry through factory method
-        HTMLsquirt += makeEntries.createSingleEntry(entry);
-    });
-    // add it to DOM
-    document.querySelector("#displayEntries").innerHTML = HTMLsquirt;
-};
+export default renderDOM;

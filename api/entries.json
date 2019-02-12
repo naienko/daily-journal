@@ -69,6 +69,13 @@
       "entry": ".then() REQUIRES a function call inside. Can be an anonymous function.",
       "mood": "not yet",
       "id": 10
+    },
+    {
+      "date": "2019-02-12",
+      "concepts": "joining related data",
+      "entry": "SQL is much less human readable than javascript+json. converted daily journal over to browserify and cleaned up a lot of modules. still having some trouble expressing data relationships -- I think I can visualise how they work, but putting it into words or into a diagram is harder.",
+      "mood": "anxious",
+      "id": 11
     }
   ],
   "extras": [
