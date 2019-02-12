@@ -46,6 +46,5 @@ const searchListener = () => {
                 }
             renderDOM.createEntries(returnedEntries);
         });
-            
     });
 }

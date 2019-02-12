@@ -2,7 +2,7 @@ module.exports = {
     "dev": {
 
         // the server root directory
-        root: "../",
+        root: "../../public",
 
         // the server port
         // can also be written as a function, e.g.
