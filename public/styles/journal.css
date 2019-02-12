@@ -1,6 +1,6 @@
 body {
     display: flex;
-    flex-direction: row;
+    flex-direction: row; 
     background: url('../images/v4fcnet_01.png') no-repeat scroll top left, black url('../images/v4fcnet_02.png') repeat-y scroll top left;
     color : #FAD489;
 	font-family : Verdana, san-serif;
@@ -14,7 +14,6 @@ article {
 fieldset {
     display: flex;
     flex-direction: column;
-    border: 0;
 }
 label {
     font-weight: bold;
@@ -28,10 +27,25 @@ nav {
     margin-left: 55px;
     margin-right: 55px;
 }
+#radioButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
 #display {
     flex-grow: 1;
     margin-top: 85px;
     margin-right: 15px;
+}
+#extras {
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+}
+#extras fieldset {
+    flex-basis: 45%;
 }
 header, .entry {
     margin-top: 10px;
