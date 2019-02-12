@@ -16,12 +16,12 @@ const API = {
             },
             body: JSON.stringify(newJournalEntry)
         })
-        .then(entries => entries.json()); // parse AS json
+            .then(entries => entries.json()); // parse AS json
     },
     delete: itemId => {
         return fetch(`http://127.0.0.1:8081/entries/${itemId}`, {
-                method: "DELETE"
-        })
+            method: "DELETE"
+        });
     },
     edit: (journalEntryObject, itemId) => {
         return fetch(`http://127.0.0.1:8088/contacts/${itemId}`, {
@@ -31,6 +31,8 @@ const API = {
             },
             body: JSON.stringify(journalEntryObject)
         })
-        .then(entries => entries.json()); // parse AS json
+            .then(entries => entries.json()); // parse AS json
     }
 };
+
+export default API;

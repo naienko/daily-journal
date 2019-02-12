@@ -1,4 +1,7 @@
-// responsible for creating the entry form HTML component
+/*
+Author: Panya
+Intent:  responsible for creating the entry form HTML component
+*/
 const makeJournalFormComponent = () => {
     // Create HTML structure for the entry form
     return `<form action="" id="journalForm">
@@ -46,3 +49,5 @@ const makeJournalFormComponent = () => {
         <div>
     </form>`;
 };
+
+export default makeJournalFormComponent;
