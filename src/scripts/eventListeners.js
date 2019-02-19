@@ -13,7 +13,7 @@ const listeners = {
         // what happens when we click the 'post' button?
         journalForm.addEventListener("click", () => {
             // collect entry data from the form
-            const entryDate = document.querySelector("#journalDate").value;
+            const entryDate = document.querySelector("#journalDate").value.getTime();
             const entryHeader = document.querySelector("#journalLearn").value;
             const entryFull = document.querySelector("#journalEntry").value;
             const entryMood = document.querySelector("#journalMood").value;
