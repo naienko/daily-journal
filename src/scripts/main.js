@@ -3,11 +3,7 @@
 
 import API from "./data";
 import renderDOM from "./entriesDOM";
-import listeners from "./eventListeners";
 
 API.getWithMoods().then(journalEntries => renderDOM.createEntries(journalEntries));
 
 renderDOM.renderFormElement();
-listeners.entryListener();
-//listeners.moodListener();
-listeners.searchListener();
