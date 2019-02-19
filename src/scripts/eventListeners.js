@@ -31,12 +31,12 @@ const listeners = {
             // add an event listener to each radio button
             element.addEventListener("click", event => {
                 // get the mood of the clicked button
-                const mood = event.target.value;
+                const mood = parseInt(event.target.value);
                 // grab all the entries from the database
-                API.get().then(
+                API.getWithMoods("entries").then(
                     journalEntries => {
                         // match the clicked mood to the mood value of a given entry
-                        const moodEntries = journalEntries.filter(entries => entries.mood === mood);
+                        const moodEntries = journalEntries.filter(entries => entries.moodId === mood);
                         // if none match do this
                         if (moodEntries.length === 0) {
                             document.querySelector("#displayEntries").innerHTML = "no entries found with that mood";
