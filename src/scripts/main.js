@@ -9,5 +9,5 @@ API.getWithMoods().then(journalEntries => renderDOM.createEntries(journalEntries
 
 renderDOM.renderFormElement();
 listeners.entryListener();
-listeners.moodListener();
+//listeners.moodListener();
 listeners.searchListener();
