@@ -8,7 +8,7 @@ const createJournalEntry = (entryDate, entryHeader, entryFull, entryMood) => {
         date: entryDate,
         concepts: entryHeader,
         entry: entryFull,
-        mood: entryMood
+        moodId: entryMood
     };
 };
 
