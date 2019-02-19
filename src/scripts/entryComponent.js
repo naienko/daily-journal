@@ -9,7 +9,7 @@ const makeEntries = {
         <span class="date">${journalEntry.date}</span>
         <section class="entry">
             <p>${journalEntry.entry}</p>
-            <p>Mood: ${journalEntry.mood}</p>
+            <p>Mood: ${journalEntry.mood.mood}</p>
         </section>
         `;
     }

@@ -5,81 +5,103 @@
       "date": "01/03/2019",
       "concepts": "basic CSS and HTML",
       "entry": "went over vanilla HTML and CSS; remember to review relationship selectors for CSS (this has progressed beyond what you used to know [oooo exciting!]); mvp means Minimum Viable Product",
-      "mood": "anxious"
+      "moodId": 1
     },
     {
       "id": 2,
       "date": "01/04/2019",
       "concepts": "git and Github",
       "entry": "git is both more complicated and less complicated than I thought; dvcs means Distributed Versioning Control System; practise the git workflow",
-      "mood": "happy"
+      "moodId": 3
     },
     {
       "id": 3,
       "date": "01/07/2019",
       "concepts": "more gitting",
       "entry": "practised git workflow and worked out tiny rough edges all day",
-      "mood": "happy"
+      "moodId": 3
     },
     {
       "id": 4,
       "date": "01/09/2019",
       "concepts": "group sprint",
       "entry": "I can't keep spending all my time helping someone else with things they should have made notes about; at least steve says there's normally time waiting when you're done and other people aren't; note to self: on the next project, we need to do better at both assigning people to specific tasks, and not stepping over each other on those tasks. Only one person should write the actual css code. git becomes very complicated when more than one person is working on exactly the same piece of code.",
-      "mood": "furious"
+      "moodId": 2
     },
     {
       "id": 5,
       "date": "01/10/2019",
       "concepts": "group project",
       "entry": "I should not have lied about how the group project made me feel",
-      "mood": "frustrated"
+      "moodId": 4
     },
     {
       "id": 6,
       "date": "01/11/2019",
       "concepts": "Objects and notations",
       "entry": "today we learned about objects, dot notation, and bracket notation; practise writing and reading arrow functions; Arrays are for collections of things; objects describe single things; Define a thing in an object, then group object in arrays",
-      "mood": "happy"
+      "moodId": 3
     },
     {
       "id": 7,
       "date": "01/21/2019",
       "concepts": "apis get, fetch",
       "entry": "fetch is a kind of Promise. Promise in JS means exactly what it sounds like: 'I promise I'll get you this data'. Seems to work in an if...when kind of way. It's possible to nest these, probably many layers deep, but scope is an issue. use the data from the fetch as near to the fetch as possible. public apis are thoroughly complicated",
-      "mood": "happy"
+      "moodId": 3
     },
     {
       "date": "01/31/2019",
       "concepts": "JSON POST method",
       "entry": "trying to add the POST method to my journal. practising factory functions, had check-in meeting.",
-      "mood": "happy",
+      "moodId": 3,
       "id": 8
     },
     {
       "date": "2019-02-01",
       "concepts": "array methods and chaining",
       "entry": "practised array methods find, reverse, map, filter, reduce. converted various functions in journal code to methods",
-      "mood": "anxious",
+      "moodId": 1,
       "id": 9
     },
     {
       "date": "2019-02-11",
       "concepts": "browserify and .then",
       "entry": ".then() REQUIRES a function call inside. Can be an anonymous function.",
-      "mood": "not yet",
+      "moodId": 5,
       "id": 10
     },
     {
       "date": "2019-02-12",
       "concepts": "joining related data",
       "entry": "SQL is much less human readable than javascript+json. converted daily journal over to browserify and cleaned up a lot of modules. still having some trouble expressing data relationships -- I think I can visualise how they work, but putting it into words or into a diagram is harder.",
-      "mood": "anxious",
+      "moodId": 1,
       "id": 11
     }
   ],
-  "extras": [
-    {},
-    {}
+  "moods" : [
+    {
+      "id": 1,
+      "mood": "anxious"
+    },
+    {
+      "id": 2,
+      "mood": "furious"
+    },
+    {
+      "id": 3,
+      "mood": "happy"
+    },
+    {
+      "id": 4,
+      "mood": "frustrated"
+    },
+    {
+      "id": 5,
+      "mood": "not yet"
+    },
+    {
+      "id": 6,
+      "mood": "successful"
+    }
   ]
 }

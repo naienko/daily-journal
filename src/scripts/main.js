@@ -5,7 +5,7 @@ import API from "./data";
 import renderDOM from "./entriesDOM";
 import listeners from "./eventListeners";
 
-API.get().then(journalEntries => renderDOM.createEntries(journalEntries));
+API.getWithMoods().then(journalEntries => renderDOM.createEntries(journalEntries));
 
 renderDOM.renderFormElement();
 listeners.entryListener();
