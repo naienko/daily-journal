@@ -3,19 +3,7 @@ Author: Panya
 Intent:  responsible for creating the entry form HTML component
 */
 
-import API from "./data";
-
-API.get("moods")
-    .then(moodArray => {
-        let HTMLcode = "";
-        moodArray.forEach(element => {
-            HTMLcode += `<option value=${element.id}>${element.mood}</option>
-`
-        });
-            return HTMLcode;
-    })
-
-const makeJournalFormComponent = () => {
+const makeJournalFormComponent = HTMLcode => {
     // Create HTML structure for the entry form
     return `<form action="" id="journalForm">
         <fieldset>
@@ -34,6 +22,7 @@ const makeJournalFormComponent = () => {
             <label for="journalMood">Mood for the day</label>
             <select name="journalMood" id="journalMood" required>
                 <option value="">Choose a mood ... </option>
+                ${HTMLcode}
             </select>
         </fieldset>
         <button id="postEntry">Record Journal Entry</button>

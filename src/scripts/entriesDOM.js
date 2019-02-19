@@ -5,6 +5,19 @@ Intent: responsible for modifying the DOM
 
 import makeJournalFormComponent from "./formComponent";
 import makeEntries from "./entryComponent";
+import API from "./data";
+
+const moodList = () => {
+    API.get("moods")
+    .then(moodArray => {
+        let HTMLcode = "";
+        moodArray.forEach(element => {
+            HTMLcode += `<option value=${element.id}>${element.mood}</option>
+    `
+        });
+            //return HTMLcode;
+    })
+}
 
 const renderDOM = {
     createEntries: entries => {
@@ -19,7 +32,16 @@ const renderDOM = {
         document.querySelector("#displayEntries").innerHTML = HTMLsquirt;
     },
     renderFormElement: () => {
-        document.querySelector("#displayForm").innerHTML = makeJournalFormComponent();
+        API.get("moods")
+        .then(moodArray => {
+            let HTMLcode = "";
+            moodArray.forEach(element => {
+                HTMLcode += `<option value=${element.id}>${element.mood}</option>
+        `
+            });
+                return HTMLcode;
+        })
+        document.querySelector("#displayForm").innerHTML = makeJournalFormComponent(HTMLcode);
     }
 };
 
