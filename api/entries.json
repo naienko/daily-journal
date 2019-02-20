@@ -86,10 +86,10 @@
     },
     {
       "date": 1550642400000,
-      "concepts": "tester",
-      "entry": "oh ye of little faith",
-      "moodId": "5",
-      "id": 13
+      "concepts": "daily journal edit and delete",
+      "entry": "it took me hours but I added edit and delete functions to this journal. I discovered that it's really not possible -- or a good idea -- to just copy code from the last time it worked, because you forget to change things.",
+      "moodId": "6",
+      "id": 14
     }
   ],
   "moods": [

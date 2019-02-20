@@ -30,6 +30,11 @@ const entryListener = () => {
             API.create(newJournalEntry)
                 .then(
                     newEntry => {
+                        document.querySelector("#journalLearn").value = "";
+                        document.querySelector("#journalEntry").value = "";
+                        document.querySelector("#journalMood").value = "";
+                        document.querySelector("#journalDate").value = "";
+                        document.querySelector("#journalId").value = "";
                         API.get("moods",`/${newEntry.moodId}`)
                             .then(
                                 moodObject => {
