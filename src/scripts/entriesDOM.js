@@ -5,7 +5,9 @@ Intent: responsible for modifying the DOM
 
 import makeEntries from "./entryComponent";
 import API from "./API";
-import listeners from "./eventListeners";
+import listeners from "./lesserListeners";
+import entrylistener from "./entrylistener";
+import entryListener from "./entrylistener";
 
 const renderDOM = {
     createEntries: entries => {
@@ -22,6 +24,7 @@ const renderDOM = {
             .then(moodArray => {
                 let insertHTML = "";
                 insertHTML = `<article id="journalForm">
+        <input type="hidden" id="journalId" value="" />
         <fieldset>
             <label for="journalDate">Date of Entry</label>
             <input type="date" name="journalDate" id="journalDate" required />
@@ -60,9 +63,9 @@ const renderDOM = {
                 <div>
             </article>`;
                 document.querySelector("#displayForm").innerHTML = insertHTML;
-                listeners.entryListener();
                 listeners.moodListener();
                 listeners.searchListener();
+                entryListener();
             });
     }
 };

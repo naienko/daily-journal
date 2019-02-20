@@ -24,7 +24,7 @@ const API = {
         });
     },
     edit: (journalEntryObject, itemId) => {
-        return fetch(`http://127.0.0.1:8088/contacts/${itemId}`, {
+        return fetch(`http://127.0.0.1:8081/entries/${itemId}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
