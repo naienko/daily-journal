@@ -3,17 +3,13 @@ body {
     flex-direction: row; 
     background: url('../images/v4fcnet_01.png') no-repeat scroll top left, black url('../images/v4fcnet_02.png') repeat-y scroll top left;
     color : #FAD489;
-	font-family : Verdana, san-serif;
+	font-family : Verdana, sans-serif;
 	font-size : 14px;
 	text-align : justify;
 	letter-spacing : .1em;
 }
 article {
     margin: 5px;
-}
-fieldset {
-    display: flex;
-    flex-direction: column;
 }
 label {
     font-weight: bold;
@@ -39,6 +35,11 @@ nav {
     margin-top: 85px;
     margin-right: 15px;
 }
+#journalForm fieldset {
+    border: 0px;
+    display: flex;
+    flex-direction: column;
+}
 #extras {
     display: flex;
     flex-direction: row;
@@ -46,6 +47,20 @@ nav {
 }
 #extras fieldset {
     flex-basis: 45%;
+    border: 1px solid;
+}
+button {
+    background: black;
+    color: #A63700;
+}
+
+/* styling a single entry block */
+.single-entry {
+    display: flex;
+    flex-direction: column;
+}
+.entry--buttons {
+    align-self: flex-end;
 }
 header, .entry {
     margin-top: 10px;
@@ -54,12 +69,13 @@ header, .entry {
 .entry {
     border: 1px solid #A63700;
     border-top: 10px solid #A63700;
+    margin-top: -13px;
 }
 .date {
-    float: right;
+    align-self: flex-end;
     padding: 5px;
     font-weight: bold;
-    margin-top: -3px;
+    z-index: 5;
 }
 header {
     font-weight: bold;
