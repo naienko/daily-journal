@@ -15,7 +15,7 @@ const renderDOM = {
             newCode += makeEntries.createSingleEntry(entry);
         });
         // add it to DOM
-        document.querySelector("#displayEntries").insertAdjacentHTML("afterbegin",newCode);
+        document.querySelector("#displayEntries").innerHTML = newCode;
     },
     renderFormElement: () => {
         API.get("moods","")
