@@ -23,7 +23,7 @@ const renderDOM = {
         API.get("moods")
             .then(moodArray => {
                 let insertHTML = "";
-                insertHTML = `<form action="" id="journalForm">
+                insertHTML = `<article id="journalForm">
         <fieldset>
             <label for="journalDate">Date of Entry</label>
             <input type="date" name="journalDate" id="journalDate" required />
@@ -39,33 +39,33 @@ const renderDOM = {
         <fieldset>
             <label for="journalMood">Mood for the day</label>
             <select name="journalMood" id="journalMood" required>
-                <option value="">Choose a mood ... </option>`
+                <option value="">Choose a mood ... </option>`;
                 moodArray.forEach(element => {
-                    insertHTML += `<option value="${element.id}">${element.mood}</option>`
-                })
+                    insertHTML += `<option value="${element.id}">${element.mood}</option>`;
+                });
                 insertHTML += `</select>
                 </fieldset>
                 <button id="postEntry">Record Journal Entry</button>
                 <div id="extras">
                     <fieldset>
                         <legend>Filter journal entries by mood</legend>
-                    <div id="radioButtons">`
-                    moodArray.forEach(element => {
-                        insertHTML += `<label for="${element.mood}">${element.mood}<input type="radio" name="moodSwitch" value="${element.id}" /></label>`
-                    });
-                    insertHTML += `</div>
+                    <div id="radioButtons">`;
+                moodArray.forEach(element => {
+                    insertHTML += `<label for="${element.mood}">${element.mood}<input type="radio" name="moodSwitch" value="${element.id}" /></label>`;
+                });
+                insertHTML += `</div>
                     </fieldset>
                     <fieldset>
                         <label for"searchjournal">search:</label>
                         <input type="text" name="searchjournal" id="searchjournal" />
                     </fieldset>
                 <div>
-            </form>`;
-            document.querySelector("#displayForm").innerHTML = insertHTML;
-            listeners.entryListener();
-            listeners.moodListener();
-            listeners.searchListener();
-            })
+            </article>`;
+                document.querySelector("#displayForm").innerHTML = insertHTML;
+                listeners.entryListener();
+                listeners.moodListener();
+                listeners.searchListener();
+            });
     }
 };
 

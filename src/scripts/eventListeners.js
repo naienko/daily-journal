@@ -22,7 +22,12 @@ const listeners = {
             // construct entry object with factory function
             const newJournalEntry = createJournalEntry(entryDate, entryHeader, entryFull, entryMood);
             // add the new object to the database
-            API.create(newJournalEntry);
+            API.create(newJournalEntry)
+                .then(
+                    returnedEntry => {
+                        let newEntry = [returnedEntry];
+                        renderDOM.createEntries(newEntry);
+                    });
         });
     },
     moodListener: () => {
@@ -59,7 +64,7 @@ const listeners = {
             // create a blank array for entries
             let returnedEntries = [];
             // grab all the entries from the database
-            API.get().then(
+            API.getWithMoods().then(
                 journalEntries => {
                     // iterate over all the values from the database
                     for (const value of Object.values(journalEntries)) {

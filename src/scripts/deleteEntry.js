@@ -4,10 +4,12 @@ Task: delete entries
 */
 
 const deleteEntry = () => {
-    document.querySelector("#contactDisplay").addEventListener("click", event => {
-        if(event.target.id.split("--")[0] === "deletebutton") {
-            API.deleteContact(event.target.id.split("--")[1])
-            .then(createContactList);
+    document.querySelector("#displayEntries").addEventListener("click", event => {
+        if(event.target.id.split("--")[1] === "delete") {
+            API.delete(event.target.id.split("--")[2])
+                .then(
+                    journalEntries => renderDOM.createEntries(journalEntries)
+                );
         }
     });
 };
