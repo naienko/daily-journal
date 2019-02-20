@@ -32,8 +32,7 @@ const listeners = {
                                     newEntry.mood = moodObject;
                                     let newCode = makeEntries.createSingleEntry(newEntry);
                                     document.querySelector("#displayEntries").insertAdjacentHTML("afterbegin", newCode);
-                                }
-                            )
+                                });
                     });
         });
     },
