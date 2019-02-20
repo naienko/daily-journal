@@ -3,9 +3,10 @@ Author: Panya
 Intent: object with event listeners
 */
 
-import API from "./data";
+import API from "./API";
 import renderDOM from "./entriesDOM";
 import createJournalEntry from "./entryFactory";
+import makeEntries from "./entryComponent";
 
 const listeners = {
     entryListener: () => {
@@ -22,7 +23,18 @@ const listeners = {
             // construct entry object with factory function
             const newJournalEntry = createJournalEntry(entryDate, entryHeader, entryFull, entryMood);
             // add the new object to the database
-            API.create(newJournalEntry);
+            API.create(newJournalEntry)
+                .then(
+                    newEntry => {
+                        API.get("moods",`/${newEntry.moodId}`)
+                            .then(
+                                moodObject => {
+                                    newEntry.mood = moodObject;
+                                    let newCode = makeEntries.createSingleEntry(newEntry);
+                                    document.querySelector("#displayEntries").insertAdjacentHTML("afterbegin", newCode);
+                                }
+                            )
+                    });
         });
     },
     moodListener: () => {
@@ -35,7 +47,7 @@ const listeners = {
                 // get the mood of the clicked button
                 const mood = parseInt(event.target.value);
                 // grab all the entries from the database
-                API.getWithMoods("entries").then(
+                API.get("entries", "?_expand=mood").then(
                     journalEntries => {
                         // match the clicked mood to the mood value of a given entry
                         const moodEntries = journalEntries.filter(entries => entries.moodId === mood);
@@ -59,7 +71,7 @@ const listeners = {
             // create a blank array for entries
             let returnedEntries = [];
             // grab all the entries from the database
-            API.get().then(
+            API.get("entries", "?_expand=mood").then(
                 journalEntries => {
                     // iterate over all the values from the database
                     for (const value of Object.values(journalEntries)) {
