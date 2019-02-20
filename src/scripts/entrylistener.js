@@ -7,14 +7,15 @@ import API from "./API";
 import createJournalEntry from "./entryFactory";
 import makeEntries from "./entryComponent";
 import renderDOM from "./entriesDOM";
+import moment from "moment";
 
 const entryListener = () => {
     const journalForm = document.querySelector("#postEntry");
     // what happens when we click the 'post' button?
     journalForm.addEventListener("click", () => {
-        const entryDateRaw = new Date(document.querySelector("#journalDate").value);
-        entryDateRaw.setHours(0,0,0);
-        const timestamp = entryDateRaw.getTime();
+        const entryDateRaw = moment(document.querySelector("#journalDate").value);
+        entryDateRaw.set({"hour": 0, "minute": 0});
+        const timestamp = entryDateRaw.valueOf();
         // collect entry data from the form
         const entryDate = timestamp;
         const entryHeader = document.querySelector("#journalLearn").value;
@@ -44,6 +45,11 @@ const entryListener = () => {
                     () => {
                         API.get("entries", "?_expand=mood&_sort=date&_order=desc")
                         .then(journalEntries => renderDOM.createEntries(journalEntries));
+                        document.querySelector("#journalLearn").value = "";
+                        document.querySelector("#journalEntry").value = "";
+                        document.querySelector("#journalMood").value = "";
+                        document.querySelector("#journalDate").value = "";
+                        document.querySelector("#journalId").value = "";
                     }
                 )
         }
