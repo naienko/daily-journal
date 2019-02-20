@@ -21,10 +21,11 @@ const entryListener = () => {
         const entryHeader = document.querySelector("#journalLearn").value;
         const entryFull = document.querySelector("#journalEntry").value;
         const entryMood = document.querySelector("#journalMood").value;
+        const entryId = document.querySelector("#journalId").value;
         // construct entry object with factory function
         const newJournalEntry = createJournalEntry(entryDate, entryHeader, entryFull, entryMood);
         // check to see if we're editing
-        if (document.querySelector("#journalId") === "") {
+        if (entryId === "") {
             // if not editing add the new object to the database
             API.create(newJournalEntry)
                 .then(
@@ -40,7 +41,7 @@ const entryListener = () => {
                     }
                 );
         } else {
-            API.edit(newJournalEntry, document.querySelector("#journalId").value)
+            API.edit(newJournalEntry, entryId)
                 .then(
                     () => {
                         API.get("entries", "?_expand=mood&_sort=date&_order=desc")
