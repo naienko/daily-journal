@@ -37,23 +37,23 @@ const entryListener = () => {
                                     document.querySelector("#displayEntries").insertAdjacentHTML("afterbegin", newCode);
                                 }
                             );
-                        }
-                    );
+                    }
+                );
         } else {
             API.edit(newJournalEntry, document.querySelector("#journalId").value)
                 .then(
                     () => {
                         API.get("entries", "?_expand=mood&_sort=date&_order=desc")
-                        .then(journalEntries => renderDOM.createEntries(journalEntries));
+                            .then(journalEntries => renderDOM.createEntries(journalEntries));
                         document.querySelector("#journalLearn").value = "";
                         document.querySelector("#journalEntry").value = "";
                         document.querySelector("#journalMood").value = "";
                         document.querySelector("#journalDate").value = "";
                         document.querySelector("#journalId").value = "";
                     }
-                )
+                );
         }
     });
-}
+};
 
 export default entryListener;
