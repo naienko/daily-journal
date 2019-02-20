@@ -3,7 +3,9 @@
 
 import API from "./data";
 import renderDOM from "./entriesDOM";
+import deleteEntry from "./deleteEntry";
 
 API.getWithMoods().then(journalEntries => renderDOM.createEntries(journalEntries));
 
 renderDOM.renderFormElement();
+deleteEntry();
