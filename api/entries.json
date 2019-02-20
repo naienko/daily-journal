@@ -2,76 +2,76 @@
   "entries": [
     {
       "id": 1,
-      "date": "01/03/2019",
+      "date": 1546495200000,
       "concepts": "basic CSS and HTML",
       "entry": "went over vanilla HTML and CSS; remember to review relationship selectors for CSS (this has progressed beyond what you used to know [oooo exciting!]); mvp means Minimum Viable Product",
       "moodId": 1
     },
     {
       "id": 2,
-      "date": "01/04/2019",
+      "date": 1546581600000,
       "concepts": "git and Github",
       "entry": "git is both more complicated and less complicated than I thought; dvcs means Distributed Versioning Control System; practise the git workflow",
       "moodId": 3
     },
     {
       "id": 3,
-      "date": "01/07/2019",
+      "date": 1546840800000,
       "concepts": "more gitting",
       "entry": "practised git workflow and worked out tiny rough edges all day",
       "moodId": 3
     },
     {
       "id": 4,
-      "date": "01/09/2019",
+      "date": 1547013600000,
       "concepts": "group sprint",
       "entry": "I can't keep spending all my time helping someone else with things they should have made notes about; at least steve says there's normally time waiting when you're done and other people aren't; note to self: on the next project, we need to do better at both assigning people to specific tasks, and not stepping over each other on those tasks. Only one person should write the actual css code. git becomes very complicated when more than one person is working on exactly the same piece of code.",
       "moodId": 2
     },
     {
       "id": 5,
-      "date": "01/10/2019",
+      "date": 1547100000000,
       "concepts": "group project",
       "entry": "I should not have lied about how the group project made me feel",
       "moodId": 4
     },
     {
       "id": 6,
-      "date": "01/11/2019",
+      "date": 1547186400000,
       "concepts": "Objects and notations",
       "entry": "today we learned about objects, dot notation, and bracket notation; practise writing and reading arrow functions; Arrays are for collections of things; objects describe single things; Define a thing in an object, then group object in arrays",
       "moodId": 3
     },
     {
       "id": 7,
-      "date": "01/21/2019",
+      "date": 1548050400000,
       "concepts": "apis get, fetch",
       "entry": "fetch is a kind of Promise. Promise in JS means exactly what it sounds like: 'I promise I'll get you this data'. Seems to work in an if...when kind of way. It's possible to nest these, probably many layers deep, but scope is an issue. use the data from the fetch as near to the fetch as possible. public apis are thoroughly complicated",
       "moodId": 3
     },
     {
-      "date": "01/31/2019",
+      "date": 1548914400000,
       "concepts": "JSON POST method",
       "entry": "trying to add the POST method to my journal. practising factory functions, had check-in meeting.",
       "moodId": 3,
       "id": 8
     },
     {
-      "date": "2019-02-01",
+      "date": 1549000800000,
       "concepts": "array methods and chaining",
       "entry": "practised array methods find, reverse, map, filter, reduce. converted various functions in journal code to methods",
       "moodId": 1,
       "id": 9
     },
     {
-      "date": "2019-02-11",
+      "date": 1549864800000,
       "concepts": "browserify and .then",
       "entry": ".then() REQUIRES a function call inside. Can be an anonymous function.",
       "moodId": 5,
       "id": 10
     },
     {
-      "date": "2019-02-12",
+      "date": 1549951200000,
       "concepts": "joining related data",
       "entry": "SQL is much less human readable than javascript+json. converted daily journal over to browserify and cleaned up a lot of modules. still having some trouble expressing data relationships -- I think I can visualise how they work, but putting it into words or into a diagram is harder.",
       "moodId": 1,
@@ -83,6 +83,48 @@
       "entry": "Today was a big bump -- I'm not as good at working in teams as I could be. Remember to COMMUNICATE to my team that I get hyperfocused; that I forget to ask for or accept help; that when help is offered sometimes I get stuck in my train of thought and want to finish it before accepting help.\nPractise modules by feature -- NOT by responsibility.\nIt's okay to ask anyone for help. It's okay to confess mistakes and weakness.",
       "moodId": "1",
       "id": 12
+    },
+    {
+      "date": 1550620800000,
+      "concepts": "tester",
+      "entry": "sdfno;einvd",
+      "moodId": "5",
+      "id": 13
+    },
+    {
+      "date": 1550620800000,
+      "concepts": "anoher test",
+      "entry": "sfsfdsdf",
+      "moodId": "5",
+      "id": 14
+    },
+    {
+      "date": 1550620800000,
+      "concepts": "sidf",
+      "entry": "sdnkferijgoeind",
+      "moodId": "5",
+      "id": 15
+    },
+    {
+      "date": 1550620800000,
+      "concepts": "lsndoiewnfl",
+      "entry": "enfineo;ifn",
+      "moodId": "5",
+      "id": 16
+    },
+    {
+      "date": 1550620800000,
+      "concepts": "sidefhsodfn",
+      "entry": "oisdfnoeirfmv",
+      "moodId": "5",
+      "id": 17
+    },
+    {
+      "date": 1550620800000,
+      "concepts": "once more",
+      "entry": "unto the breach",
+      "moodId": "5",
+      "id": 18
     }
   ],
   "moods": [

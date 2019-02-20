@@ -4,26 +4,24 @@ Intent: responsible for modifying the DOM
 */
 
 import makeEntries from "./entryComponent";
-import API from "./data";
+import API from "./API";
 import listeners from "./eventListeners";
 
 const renderDOM = {
     createEntries: entries => {
-        let HTMLsquirt = "";
-        // reverse the array so most recent is at top
-        // add a sorting function in case the entries aren't in data order in database?
-        entries.reverse().forEach(entry => {
+        let newCode = "";
+        entries.forEach(entry => {
             // run each entry through factory method
-            HTMLsquirt += makeEntries.createSingleEntry(entry);
+            newCode += makeEntries.createSingleEntry(entry);
         });
         // add it to DOM
-        document.querySelector("#displayEntries").innerHTML = HTMLsquirt;
+        document.querySelector("#displayEntries").insertAdjacentHTML("afterbegin",newCode);
     },
     renderFormElement: () => {
-        API.get("moods")
+        API.get("moods","")
             .then(moodArray => {
                 let insertHTML = "";
-                insertHTML = `<form action="" id="journalForm">
+                insertHTML = `<article id="journalForm">
         <fieldset>
             <label for="journalDate">Date of Entry</label>
             <input type="date" name="journalDate" id="journalDate" required />
@@ -60,7 +58,7 @@ const renderDOM = {
                         <input type="text" name="searchjournal" id="searchjournal" />
                     </fieldset>
                 <div>
-            </form>`;
+            </article>`;
             document.querySelector("#displayForm").innerHTML = insertHTML;
             listeners.entryListener();
             listeners.moodListener();

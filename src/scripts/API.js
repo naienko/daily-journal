@@ -4,13 +4,9 @@ Intent: all contacts with the json server
 */
 
 const API = {
-    get: database => { // this is a method defined on the API object
-        return fetch(`http://localhost:8081/${database}`) // fetch from the JSON
+    get: (database, query) => { // this is a method defined on the API object
+        return fetch(`http://localhost:8081/${database}${query}`) // fetch from the JSON
             .then(entries => entries.json()); // parse AS json
-    },
-    getWithMoods: () => {
-        return fetch("http://localhost:8081/entries?_expand=mood")
-            .then(entries => entries.json());
     },
     create: newJournalEntry => {
         return fetch("http://localhost:8081/entries",{
