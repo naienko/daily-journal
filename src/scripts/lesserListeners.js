@@ -5,37 +5,8 @@ Intent: object with event listeners
 
 import API from "./API";
 import renderDOM from "./entriesDOM";
-import createJournalEntry from "./entryFactory";
-import makeEntries from "./entryComponent";
 
 const listeners = {
-    entryListener: () => {
-        const journalForm = document.querySelector("#postEntry");
-        // what happens when we click the 'post' button?
-        journalForm.addEventListener("click", () => {
-            const entryDateRaw = new Date(document.querySelector("#journalDate").value);
-            const timestamp = entryDateRaw.getTime();
-            // collect entry data from the form
-            const entryDate = timestamp;
-            const entryHeader = document.querySelector("#journalLearn").value;
-            const entryFull = document.querySelector("#journalEntry").value;
-            const entryMood = document.querySelector("#journalMood").value;
-            // construct entry object with factory function
-            const newJournalEntry = createJournalEntry(entryDate, entryHeader, entryFull, entryMood);
-            // add the new object to the database
-            API.create(newJournalEntry)
-                .then(
-                    newEntry => {
-                        API.get("moods",`/${newEntry.moodId}`)
-                            .then(
-                                moodObject => {
-                                    newEntry.mood = moodObject;
-                                    let newCode = makeEntries.createSingleEntry(newEntry);
-                                    document.querySelector("#displayEntries").insertAdjacentHTML("afterbegin", newCode);
-                                });
-                    });
-        });
-    },
     moodListener: () => {
         // get the list of all moods in an array
         const moodSwitchList = document.getElementsByName("moodSwitch");

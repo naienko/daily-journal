@@ -4,7 +4,7 @@ Task: edit entries
 */
 
 import API from "./API";
-import renderDOM from "./entriesDOM";
+import entryListener from "./entrylistener";
 
 const editEntry = () => {
     document.querySelector("#displayEntries").addEventListener("click", event => {
@@ -15,6 +15,9 @@ const editEntry = () => {
                         document.querySelector("#journalLearn").value = returnedEntry.concepts;
                         document.querySelector("#journalEntry").value = returnedEntry.entry;
                         document.querySelector("#journalMood").value = returnedEntry.moodId;
+                        document.querySelector("#journalId").value = returnedEntry.id;
+                        document.querySelector("#journalDate").value = returnedEntry.date;
+                        entryListener();
                     }
                 );
         }
