@@ -5,7 +5,8 @@ Task: listen to the entry form
 
 import API from "./API";
 import createJournalEntry from "./entryFactory";
-import makeEntries from "./entryComponent"
+import makeEntries from "./entryComponent";
+import renderDOM from "./entriesDOM";
 
 const entryListener = () => {
     const journalForm = document.querySelector("#postEntry");
@@ -22,7 +23,7 @@ const entryListener = () => {
         // construct entry object with factory function
         const newJournalEntry = createJournalEntry(entryDate, entryHeader, entryFull, entryMood);
         // check to see if we're editing
-        if (document.querySelector("#journalId") !== "") {
+        if (document.querySelector("#journalId") === "") {
             // if not editing add the new object to the database
             API.create(newJournalEntry)
                 .then(
@@ -38,7 +39,7 @@ const entryListener = () => {
                         }
                     );
         } else {
-            API.edit(newJournalEntry, document.querySelector("#journalId"))
+            API.edit(newJournalEntry, document.querySelector("#journalId").value)
                 .then(
                     () => {
                         API.get("entries", "?_expand=mood&_sort=date&_order=desc")

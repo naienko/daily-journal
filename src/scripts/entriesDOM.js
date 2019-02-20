@@ -6,6 +6,8 @@ Intent: responsible for modifying the DOM
 import makeEntries from "./entryComponent";
 import API from "./API";
 import listeners from "./lesserListeners";
+import entrylistener from "./entrylistener";
+import entryListener from "./entrylistener";
 
 const renderDOM = {
     createEntries: entries => {
@@ -63,6 +65,7 @@ const renderDOM = {
                 document.querySelector("#displayForm").innerHTML = insertHTML;
                 listeners.moodListener();
                 listeners.searchListener();
+                entryListener();
             });
     }
 };

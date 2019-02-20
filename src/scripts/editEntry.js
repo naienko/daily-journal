@@ -3,8 +3,9 @@ Author: Panya
 Task: edit entries
 */
 
+import taco from "moment-timezone";
 import API from "./API";
-import entryListener from "./entrylistener";
+import moment from "moment";
 
 const editEntry = () => {
     document.querySelector("#displayEntries").addEventListener("click", event => {
@@ -16,8 +17,9 @@ const editEntry = () => {
                         document.querySelector("#journalEntry").value = returnedEntry.entry;
                         document.querySelector("#journalMood").value = returnedEntry.moodId;
                         document.querySelector("#journalId").value = returnedEntry.id;
-                        document.querySelector("#journalDate").value = returnedEntry.date;
-                        entryListener();
+                        let timestamp = returnedEntry.date;
+                        document.querySelector("#journalDate").value = moment(timestamp).tz("America/Chicago").format("YYYY-MM-DD");
+                        //entryListener();
                     }
                 );
         }

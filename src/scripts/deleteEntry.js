@@ -13,7 +13,7 @@ const deleteEntry = () => {
                 .then(
                     () => {
                         API.get("entries", "?_expand=mood&_sort=date&_order=desc")
-                        .then(journalEntries => renderDOM.createEntries(journalEntries));
+                            .then(journalEntries => renderDOM.createEntries(journalEntries));
                     }
                 );
         }
